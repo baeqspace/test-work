@@ -3,7 +3,8 @@ import { env } from './EnvironmentConfig'
 
 export const APP_NAME = 'Emilus';
 export const API_BASE_URL = env.API_ENDPOINT_URL
-export const APP_PREFIX_PATH = '/test-work/build/app';
+export const APP_PREFIX_GITHUB = '/test-work/build'
+export const APP_PREFIX_PATH = `${APP_PREFIX_GITHUB}/app`;
 export const AUTH_PREFIX_PATH = '/auth';
 
 export const THEME_CONFIG = {

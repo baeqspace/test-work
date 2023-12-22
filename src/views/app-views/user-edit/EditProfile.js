@@ -4,6 +4,7 @@ import { UserOutlined } from '@ant-design/icons';
 import { ROW_GUTTER } from 'constants/ThemeConstant';
 import Flex from 'components/shared-components/Flex'
 import Loading from 'components/shared-components/Loading';
+import { APP_PREFIX_PATH } from 'configs/AppConfig'
 
 export class EditProfile extends Component {
 
@@ -22,7 +23,7 @@ export class EditProfile extends Component {
 		const data = await (await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)).json()
 		if (!data.name) {
 			alert('Ошибка!')
-			this.props.history.push('/app/main/clients/clientsList')
+			this.props.history.push(`${APP_PREFIX_PATH}/main/clients/clientsList`)
 			return
 		}
 		this.setState(data)
@@ -38,7 +39,7 @@ export class EditProfile extends Component {
 	handleSubmit() {
 		this.setState({...this.state, loader: true})
 		setTimeout(()=>{
-			this.props.history.push('/app/main/clients/clientsList')
+			this.props.history.push(`${APP_PREFIX_PATH}/main/clients/clientsList`)
 		},1000)
 	}
 
