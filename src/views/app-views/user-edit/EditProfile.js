@@ -3,7 +3,7 @@ import { Form, Avatar, Button, Input, DatePicker, Row, Col, message, Upload } fr
 import { UserOutlined } from '@ant-design/icons';
 import { ROW_GUTTER } from 'constants/ThemeConstant';
 import Flex from 'components/shared-components/Flex'
-import { Loader } from 'components/util-components/Loader/Loader';
+import Loading from 'components/shared-components/Loading';
 
 export class EditProfile extends Component {
 
@@ -94,11 +94,11 @@ export class EditProfile extends Component {
 
 		const { name, email, username, phone, website } = this.state;
 
-		if (!name) return <Loader/>
+		if (!name) return <Loading/>
 
 		return (
 			<>
-				{this.state.loader && <Loader/>}
+				{this.state.loader && <Loading/>}
 				<Flex alignItems="center" mobileFlex={false} className="text-center text-md-left">
 					<Avatar size={90} icon={<UserOutlined />}/>
 					<div className="ml-md-3 mt-md-0 mt-3">

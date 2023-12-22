@@ -17,7 +17,7 @@ export const Views = (props) => {
       messages={currentAppLocale.messages}>
       <ConfigProvider locale={currentAppLocale.antd}>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/test-work/build">
             <Redirect to={APP_PREFIX_PATH} />
           </Route>
           <Route path={AUTH_PREFIX_PATH}>

@@ -5,7 +5,7 @@ import moment from 'moment';
 import UserView from './UserView';
 import AvatarStatus from 'components/shared-components/AvatarStatus';
 import userData from "assets/data/user-list.data.json";
-import {Loader} from '../../../components/util-components/Loader/Loader'
+import Loading from 'components/shared-components/Loading';
 import { APP_PREFIX_PATH } from 'configs/AppConfig'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
@@ -108,7 +108,7 @@ export class UserList extends Component {
 		];
 		return (
 			<Card bodyStyle={{'padding': '0px'}}>
-				{loader && <Loader/>}
+				{loader && <Loading/>}
 				<Table columns={tableColumns} dataSource={users} rowKey='id' />
 				<UserView data={selectedUser} visible={userProfileVisible} close={()=> {this.closeUserProfile()}}/>
 			</Card>

@@ -15,13 +15,3 @@
 .loading .ant-spin {
   color: #3e79f7;
 }
-
-.loader {
-  animation: loader 5s linear infinite;
-}
-
-@keyframes loader {
-  to {
-    transform: rotate(360deg);
-  }
-}
